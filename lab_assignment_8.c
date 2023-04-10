@@ -37,7 +37,6 @@ void heapSort(int arr[], int n)
         int temp = arr[i];
         arr[i] = arr[0];
         arr[0] = temp;
-
         
         int parent = 0;
         while (parent * 2 + 1 < i){
@@ -56,11 +55,9 @@ void heapSort(int arr[], int n)
             parent = largerChild;
         }
     }
-
     int extraMemoryAllocated = maxHeapSize * sizeof(int); 
 
 }
-
 
 void mergeSort(int pData[], int l, int r)
 {
@@ -73,7 +70,6 @@ void mergeSort(int pData[], int l, int r)
   int n1 = m - l + 1;
   int n2 = r - m;
 
- 
   int* L = (int*) malloc(n1 * sizeof(int));
   int* R = (int*) malloc(n2 * sizeof(int));
 
@@ -134,10 +130,8 @@ int parseData(char *inputFileName, int **ppData)
 			data = *ppData + i;
 			*data = n;
 		}
-
 		fclose(inFile);
 	}
-	
 	return dataSz;
 }
 
